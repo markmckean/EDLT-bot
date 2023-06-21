@@ -6,8 +6,8 @@ import datetime
 
 
 def run_discord_bot():
-    TOKEN = 'MTA0NTQxMjY4NzA2NjE3NzY0OA.G5Wh-w.ZElpoLzO4Hbmg7rj985clMCxVy0-RDVKgVPhFk'
-    SERVER_ID = 1045395445163241563
+    TOKEN = # Bot Token
+    SERVER_ID = # Server ID
 
     intents = discord.Intents.default()
     intents.message_content = True
@@ -17,7 +17,7 @@ def run_discord_bot():
     async def on_ready():
         print(f'{client.user} is now running', flush=True)
         global TEST_CHANNEL
-        TEST_CHANNEL = client.get_channel(1066412436850221056)
+        TEST_CHANNEL = client.get_channel(# Channel to send basic log messages)
         await TEST_CHANNEL.send('BOT IS ONLINE')
 
     @client.command()
